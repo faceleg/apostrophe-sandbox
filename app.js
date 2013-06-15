@@ -126,6 +126,7 @@ function initUploadfs(callback) {
 function initApos(callback) {
   require('apostrophe-twitter')({ apos: apos, app: app });
   require('apostrophe-rss')({ apos: apos, app: app });
+  require('apostrophe-raptor')({ apos: apos, app: app });
 
   async.series([initAposMain, initAposPages, initAposSnippets, initAposBlog, initAposEvents, initAposMap, initAposPeople, initAposGroups,initAposSections, initAposPageTypesMenu, initAposAppAssets], callback);
 
